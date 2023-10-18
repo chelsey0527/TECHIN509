@@ -49,9 +49,9 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
     return input_board
 
 # Test cases
-# modified_board = flood_fill(input_board=board, old=".", new="~", x=5, y=12)
-# modified_board = flood_fill(input_board=board, old=".", new="~", x=-5, y=200)
-modified_board = flood_fill(input_board=board, old=".", new="~", x=0, y=0)
+# modified_board = flood_fill(input_board=board, old=".", new="X", x=5, y=12)
+# modified_board = flood_fill(input_board=board, old=".", new="X", x=-5, y=200)
+modified_board = flood_fill(input_board=board, old=".", new="X", x=0, y=0)
 
 for a in modified_board:
     print(a)
