@@ -25,10 +25,16 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
     """
     ROWS = len(input_board)
     COLS = len(input_board[0])
+    row_checker = ROWS[0]
 
     # Check if x and y are within valid coordinates
     if x >= ROWS or y >= COLS:
         return input_board  # Return the board unchanged
+    
+    # Check if each line has the same number of columns
+    for row in input_board:
+        if len(row) != COLS:
+            return input_board
 
     # Implement dfs for flood fill algorithm
     def dfs(x, y):
