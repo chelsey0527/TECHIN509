@@ -34,7 +34,7 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
     # Check if each line has the same number of columns
     for row in input_board:
         if len(row) != COLS:
-            return input_board
+            return print('inconsistant number of matrix')
 
     # Implement dfs for flood fill algorithm
     def dfs(x, y):
